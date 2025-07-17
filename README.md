@@ -70,6 +70,8 @@ NeuralNetwork/
 ├── chatbot_training.py
 ├── custom_sklearn_test.py
 │
+├── .gitignore
+│
 └── README.md
 ```
 
