@@ -62,17 +62,13 @@ Dieses Modul bietet eine einfache Möglichkeit, einen Chatbot mit neuronalen Net
 ## Dateistruktur
 
 ```
-chatbot/
+NeuralNetwork/
+├── custom_sklearn/
+│   ├── decisiontree.py
+│   └── neural_network.py
 │
-├── NeuralNetwork/
-│   ├── custom_sklearn/
-│   │   ├── decisiontree.py
-│   │   └── neural_network.py
-│   └── chatbot_training.py
-│
-├── Chatbot/
-│   ├── chatbot.py
-│   └── ChatbotTraining.csv
+├── chatbot_training.py
+├── custom_sklearn_test.py
 │
 └── README.md
 ```
