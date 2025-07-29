@@ -10,12 +10,20 @@ import numpy as np
 
 
 class SimpleNeuralNetwork:
-    """SimpleNeuralNetwork is a simple feedforward neural network with hidden layer.
-    
-    It supports training using backpropagation and can be used for classification tasks.
-    It includes functions for initializing weights, forward propagation, backward propagation, and training the network.
-    The network uses the sigmoid activation function and its derivative for training via backpropagation.
-    """    
+    """A simple feedforward neural network supporting one or more hidden layers.
+
+    This class provides methods for initializing weights, performing forward and backward propagation,
+    training the network using backpropagation, making predictions, and evaluating accuracy.
+    The network uses the sigmoid activation function for all layers and its derivative for training via backpropagation.
+
+    Attributes:
+        input_size (int): Number of input features.
+        hidden_sizes (list): List containing the number of neurons in each hidden layer.
+        output_size (int): Number of output neurons.
+        epochs (int): Number of training epochs.
+        learning_rate (float): Learning rate for weight updates.
+        weights (list): List of weight matrices for each layer.
+    """
     def __init__(self, input_size: int, hidden_size: any, output_size: int, epochs: int, learning_rate: float = 0.1):
         """Initializes the SimpleNeuralNetwork with specified parameters.
 
