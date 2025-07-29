@@ -47,13 +47,17 @@ y_test = np.eye(10)[y_test]
 # Training
 simple_neural_network = SimpleNeuralNetwork(input_size=input_size, hidden_size=hidden_size, output_size=output_size, 
                                             epochs=epochs, learning_rate=learning_rate)
-input_weight, output_weight = simple_neural_network.train(X_train, y_train)
+weights = simple_neural_network.train(X_train, y_train)
 
-custom_classifier = CustomDecisionTreeClassifier()
-custom_classifier.fit(input_weight, output_weight)
+# TODO: Deprecated, Remove the all functions of CustomDecisionTreeClassifier and use only SimpleNeuralNetwork
+# custom_classifier = CustomDecisionTreeClassifier()
+# custom_classifier.fit(input_weight, output_weight)
 
-predictions = custom_classifier.predict(X_test)
-accuracy = custom_classifier.accuracy_score(y_test, predictions)
+# predictions = custom_classifier.predict(X_test)
+# accuracy = custom_classifier.accuracy_score(y_test, predictions)
+
+predictions = simple_neural_network.predict(X_test)
+accuracy = simple_neural_network.accuracy_score(y_test, predictions)
 
 print(f"Predictions: {predictions}")
 print(f'Accuracy: {accuracy:.2f}%')

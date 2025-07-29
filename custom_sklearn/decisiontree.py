@@ -7,7 +7,7 @@ Created on Tue Jul 15 11:27:06 2025
 """
 
 import numpy as np
-from .neural_network import SimpleNeuralNetwork
+from custom_sklearn.neural_network import SimpleNeuralNetwork
 
 
 class CustomDecisionTreeClassifier:
