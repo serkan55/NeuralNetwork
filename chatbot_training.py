@@ -44,10 +44,9 @@ epochs = 1000
 learning_rate = 0.1
 
 neural_network = SimpleNeuralNetwork(input_size=input_size, hidden_size = hidden_size, output_size=output_size, epochs=epochs, learning_rate=learning_rate)
-weights = neural_network.train(X_train, y_train)
+neural_network.fit(X_train, y_train)
 
 predictions = neural_network.predict(X_train)
-print(type(predictions))
 print(f"Predictions: {predictions}")
 
 # Calculate accuracy
